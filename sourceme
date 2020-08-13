@@ -1,0 +1,7 @@
+alias h='echo "r019.2 depth9 abcd,quiet,hnull2" > /dev/stderr;find /[abcdefghijklmnoqrsquvwxyz]* -maxdepth 9 -type f -name "*.his" 2>err|xargs egrep -h '
+alias his='history | tee -a '$PWD/'history_$USER.$HOSTNAME$LOGNAME_`date +%d%h%y_%H%M`.his'
+[ ! -e /sys/devices/virtual/thermal/thermal_zone0/temp ] && PS1='\[\e[32m\]$?  _`date +%H%M`__ \[\e]0;\w\a\]\[\e[29m\]\u@\h \[\e[33m\]\w\[\e[0m\] '$TA5K'.com \$\n`history 1 >> '$PWD'/his.$USERNAME$LOGNAME$HOSTNAME.'`date +%d%h%y_%H%M`'$ts1.his`'
+[ ! -e /sys/devices/virtual/thermal/thermal_zone0/temp ] && PS1='\[\e[32m\]$? \[\e]0;\w\a\]\[\e[27m\]\u@\h \[\e[28m\]\w\[\e[0m\] \[\e[0m\] __`date +%H%M`__ \[\e[33m\]'$TA5K'.com \$\n`history 1 >> '$PWD'/his.$USERNAME$LOGNAME$HOSTNAME.'`date +%d%h%y_%H%M`'$ts1.his`\[\e[0m\]'
+[ -e /sys/devices/virtual/thermal/thermal_zone0/temp ] && PS1='$? _`date +%H%M`__ \[\e]0;\w\a\]\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\] $(</sys/devices/virtual/thermal/thermal_zone0/temp) '$TA5K'.com \$\n`history 1 >> '$PWD'/his.$USERNAME$LOGNAME$HOSTNAME.'`date +%d%h%y_%H%M`'$ts1.his`'
+alias PSspain='PS1='\''\[\e[31m\]$? _`date +%H%M`__ \[\e]0;\w\a\]\[\e[33m\]\u@\h \[\e[31m\]\w\[\e[0m\] '\''$TA5K'\''.com \$\n`history 1 >> '\''$PWD'\''/his.$USERNAME$LOGNAME$HOSTNAME.'\''`date +%d%h%y_%H%M`'\''$ts1.his`'\'' '
+which /system/bin/screencap && PS1='_`date +%H%M`_fc \[\e]0;\w\a\]\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]`fc -l -1 >> $PWD/his_sotg32a_fc.$USERNAME.'`date +%d%h%y_%H%M`'.his`\$\n'
